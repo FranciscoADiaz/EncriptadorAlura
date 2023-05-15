@@ -19,6 +19,20 @@ function encriptar() {
 
   // Quita la imagen de fondo del elemento HTML con el id "mensaje"
   document.querySelector("#mensaje").style.backgroundImage = "none";
+
+
+
+  //mensaje de sugerencia si se intenta encriptar con el campo vacío
+  if (texto === "") {
+    //el mensaje que muestra
+    document.querySelector(".text-area").setAttribute("placeholder", "Debe ingresar un texto antes de encriptar");
+    
+    //Restaurar el placeholder original después de 1.5 segundos
+    setTimeout(function() {
+      document.querySelector(".text-area").setAttribute("placeholder", "Ingrese su texto aquí");
+    }, 1500);
+  } 
+
 }
 
 

@@ -64,6 +64,7 @@
 
 /*ENCRIPTADOR*/
 .text-area {
+    display: "";
     background: skyblue;
     border: none;
     border-radius: 5%; 
@@ -72,6 +73,7 @@
     box-shadow: 1px 1px 10px black;
     white-space: pre-wrap;
 }
+
 
 ::placeholder {
     color: black;
@@ -136,7 +138,7 @@ h6 {
     background-image: url("img/4.gif");
     background-size: contain; /*ajusta el tamaño a su contenedor*/
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     border: none;
     border-radius: 5%;
     padding: 10px;
