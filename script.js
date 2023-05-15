@@ -1,56 +1,85 @@
   
-  /*FUNCIÓN ENCRIPTAR*/
-  function encriptar() {
-    const texto = document.querySelector(".text-area").value.toLowerCase(); 
-    const valores = { "e": "enter", "i": "imes", "a": "ai", "o": "ober", "u": "ufat" };
-    const textoEncriptado = texto.replace(/[eiaou]/img, letra => valores[letra]);
+ /*FUNCIÓN ENCRIPTAR*/
+function encriptar() {
+  // Obtiene el valor del texto ingresado en el elemento HTML con la clase "text-area" y lo convierte a minúsculas
+  const texto = document.querySelector(".text-area").value.toLowerCase();
 
-    document.querySelector("#mensaje").innerHTML = textoEncriptado;
-    document.querySelector(".text-area").value = ""; 
-    document.querySelector("#mensaje").style.backgroundImage = "none"; 
-  }
+  // Crea un objeto que contiene las letras y sus respectivos valores encriptados
+  const valores = { "e": "enter", "i": "imes", "a": "ai", "o": "ober", "u": "ufat" };
+
+  // Reemplaza las letras "e", "i", "a", "o" y "u" en el texto utilizando una expresión regular
+  // y la función de reemplazo proporcionada por el objeto "valores"
+  const textoEncriptado = texto.replace(/[eiaou]/img, letra => valores[letra]);
+
+  // Actualiza el contenido del elemento HTML con el id "mensaje" con el texto encriptado
+  document.querySelector("#mensaje").innerHTML = textoEncriptado;
+
+  // Borra el texto en el área de texto HTML con la clase "text-area"
+  document.querySelector(".text-area").value = "";
+
+  // Quita la imagen de fondo del elemento HTML con el id "mensaje"
+  document.querySelector("#mensaje").style.backgroundImage = "none";
+}
+
+
+
+/*FUNCIÓN DESENCRIPTAR*/
+function desencriptar() {
+  // Obtiene el valor del texto ingresado en el elemento HTML con la clase "text-area" y lo convierte a minúsculas
+  const textoEncriptado = document.querySelector(".text-area").value.toLowerCase();
+
+  // Crea un objeto que contiene los valores encriptados y sus respectivas letras desencriptadas
+  const valores = { "enter": "e", "imes": "i", "ai": "a", "ober": "o", "ufat": "u" };
+
+  // Reemplaza los valores encriptados "enter", "imes", "ai", "ober" y "ufat" en el textoEncriptado
+  // utilizando una expresión regular y la función de reemplazo proporcionada por el objeto "valores"
+  const textoDesencriptado = textoEncriptado.replace(/enter|imes|ai|ober|ufat/g, valor => valores[valor]);
+
+  // Actualiza el contenido del elemento HTML con el id "mensaje" con el texto desencriptado
+  document.querySelector("#mensaje").innerHTML = textoDesencriptado;
+
+  // Borra el texto en el área de texto HTML con la clase "text-area"
+  document.querySelector(".text-area").value = "";
+
+  // Quita la imagen de fondo del elemento HTML con el id "mensaje"
+  document.querySelector("#mensaje").style.backgroundImage = "none";
+}
+
+
+
+/*BOTON COPIAR*/
+function copiar() {
+  // Obtiene el contenido del elemento HTML con el id "mensaje"
+  let mensaje = document.getElementById("mensaje").value;
+
+  // Copia el contenido del mensaje al portapapeles del usuario utilizando la API del portapapeles
+  navigator.clipboard.writeText(mensaje);
+}
+
+
+
   
-   /*toma el valor del texto que se escribe, lo pasa a mínuscula y lo guarda en la constante*/
-  /*guarda el valor de cada letra con su valor encriptado*/
-  /*reemplaza las letras (mayúsculas o minúsculas de todas las líneas) por su valor encriptado y los guarda en la constante*/
-  /*muestra el texto encriptado en el area mensaje
-  // borra el texto en el área de texto
-  // quita la imagen de fondo del area mensaje
-  
-  /*FUNCIÓN DESENCRIPTAR*/
-  function desencriptar() {
-    const textoEncriptado = document.querySelector(".text-area").value.toLowerCase();
-    const valores = { "enter": "e", "imes": "i", "ai": "a", "ober": "o", "ufat": "u" };
-    const textoDesencriptado = textoEncriptado.replace(/enter|imes|ai|ober|ufat/g, valor => valores[valor]);
-  
-    document.querySelector("#mensaje").innerHTML = textoDesencriptado;
-    document.querySelector(".text-area").value = ""; 
-    document.querySelector("#mensaje").style.backgroundImage = "none"; 
-  }
-  
+/*SOLO MINÚSCULAS Y SIN ACENTOS*/
+const textArea = document.querySelector(".text-area");
 
-        
-  /*BOTON COPIAR*/
-  function copiar() { 
-    let mensaje = document.getElementById("mensaje").value;  // Obtiene el contenido del elemento "mensaje"
-    navigator.clipboard.writeText(mensaje);  // Copia el contenido del mensaje al portapapeles
-  }
-          
+// Agrega un evento de escucha al elemento HTML con la clase "text-area"
+// para que cuando se ingrese texto, se realice una serie de transformaciones en el texto ingresado
+textArea.addEventListener('input', (event) => {
+  // Crea una expresión regular que coincide con cualquier caracter que no sea una letra minúscula o un espacio
+  const regex = /[^a-z ]/g;
 
-
-  /*SOLO MINÚSCULAS Y SIN ACENTOS*/
-  const textArea = document.querySelector(".text-area");
-
-  textArea.addEventListener('input', (event) => {
-  const regex = /[^a-z ]/g; // Expresión regular que permite solo letras minúsculas sin acentos y espacios
+  // Convierte el valor del texto ingresado en minúsculas y luego reemplaza todos los caracteres
+  // que no sean letras minúsculas o espacios por una cadena vacía, utilizando la expresión regular
   event.target.value = event.target.value.toLowerCase().replace(regex, '');
- });
+});
 
-          
-  /*MODO ESCURO*/
-  function darkmode() {
-    document.body.classList.toggle("dark-mode");
 
-  }
+
+
+/*MODO ESCURO*/
+function darkmode() {
+  //le agrega y quita la clase "dark-mode al body" lo que hace que tome o no los estilos de la hoja dark-mode.css
+  document.body.classList.toggle("dark-mode");
+}
 
         

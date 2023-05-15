@@ -27,6 +27,7 @@
 .dark-mode .btn-copiar:active {
     color: yellow;
     background: rgb(255, 2, 2);
+
 }
 
 
@@ -38,8 +39,13 @@
     transition: .2s;
 }
 
+
 .dark-mode ::placeholder {
     color: rgba(5, 255, 5);
     opacity: .5;
 }
+
+
+
+
 

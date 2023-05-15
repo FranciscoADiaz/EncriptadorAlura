@@ -4,8 +4,8 @@
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
+    --background-color: black;
 }
-
 
 
 
@@ -107,10 +107,6 @@ h6 {
     color: #0A3871;
 }
 
-
-
-
-
 .btn-desencriptar {
     background: #0A3871;
     color: white;
@@ -137,7 +133,7 @@ h6 {
 /*MENSAJE*/
 #mensaje {
     background: yellow; 
-    background-image: url("img/numbers-1630.gif");
+    background-image: url("img/4.gif");
     background-size: contain; /*ajusta el tamaño a su contenedor*/
     background-repeat: no-repeat;
     background-position: center center;
@@ -146,6 +142,7 @@ h6 {
     padding: 10px;
     margin: 5px;
     box-shadow: 1px 1px 10px black;
+
 }
 
 
@@ -194,52 +191,49 @@ h6 {
 
 
 
-
   
   
 /*DISEÑO ADAPTABLE PARA MOVIL*/
 @media (max-width: 768px) {
 
-    
-
-    .logo {
-        width: 100%;
-        margin: 10px 0 50px 0;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;   
+.logo {
+    width: 100%;
+    margin: 10px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;   
     }
 
-    #dark-mode {
-        height: 50px; 
+#dark-mode {
+    height: 50px; 
     }
   
-    .referencia {
+.referencia {
     width: 100%;
     text-align: center;
     }
 
-    h3 {
+h3 {
     font-size: large;
     font-weight: bold;
     font-family: 'Shantell Sans', cursive;
     }
 
-    span {
+span {
     font-size: small;
     font-weight: bold;
     opacity: .5;
     }
 
 
-    .container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     }
     
     
@@ -265,4 +259,4 @@ h6 {
       margin: 0 10px 20px 10px ;
     }
     
-  }
+}
