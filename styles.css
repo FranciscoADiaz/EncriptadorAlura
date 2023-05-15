@@ -211,6 +211,10 @@ h6 {
         text-align: center;
         align-items: center;   
     }
+
+    #dark-mode {
+        height: 50px; 
+    }
   
     .referencia {
     width: 100%;
