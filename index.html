@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Covered+By+Your+Grace&family=Dancing+Script:wght@500&family=Josefin+Sans:wght@300&family=Mynerve&family=Poppins&family=Rock+Salt&family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <title>Encriptador</title>
+</head>
+<body>
+    
+
+<header>
+    <div class="logo" >
+        <div>
+            <img src="img/alura.svg" alt="logo de Alura">
+        </div>
+        <button id="dark-mode" onclick="darkmode()">Cambiar Modo</button>   
+    </div>
+</header>
+
+
+
+
+
+<main>  
+    <div class="referencia">
+    <h1>ENCRIPTADOR DE TEXTO</h1>
+    <span>Ingrese el texto que desea encriptar o desencriptar.</span> <br>
+    <span class="información"><i class="fas fa-exclamation-triangle" ></i>Solo letras minúsculas y sin acentos.</span>
+    </div>
+
+       <div class="container">
+        <section id="encriptador">
+            <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese su texto aquí"></textarea>
+    
+            <div class="botones-encriptador">
+                <button class="btn-encriptar" onclick="encriptar()">Encriptar
+                <button class="btn-desencriptar" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </section>
+    
+    
+        <section id="mensaje-desencriptado">
+            <textarea id="mensaje" cols="30" rows="10"></textarea>
+        
+            <div class="boton-mensaje">
+                <button class="btn-copiar" onclick="copiar()">Copiar</button>
+            </div>
+        </section>
+       </div>
+</main>
+
+<footer>
+    <div class="info-desarrollador">
+        <h6><span>Desarrollado por Diaz Francisco para el grupo 5 de Alura Latam</span>.</h6> 
+        <a href="https://github.com/FranciscoADiaz" target="_blank"> 
+            <img class="img-github" src="img/GitHub.png" alt="Enlace a mi perfil de GitHub">
+        </a>              
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

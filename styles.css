@@ -1,0 +1,264 @@
+*{
+    background: #E5E5E5;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+
+
+
+/*HEADER*/
+#dark-mode {
+    font-family: 'Source Code Pro', monospace;
+    font-size: medium;
+    align-items: center;
+    border: 1px solid #0A3871;
+    box-shadow: 1px 1px 10px black;
+    border-radius: 24px;
+    cursor: pointer;
+    width: 120px;
+    height: 30px;   
+}
+
+
+
+
+.logo {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+  
+.referencia {
+    width: 100%;
+    text-align: center;
+    }
+
+    h1 {
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Source Code Pro', monospace;
+    }
+
+    span {
+    font-size: medium;
+    font-weight: bold;
+    opacity: .5;
+    }
+
+
+
+/*CONTENEDOR*/
+.container {
+    display: flex; 
+    width: 940px;
+    margin: 0 auto;  /*centra el contenedor en la página*/
+    justify-content: center; /*centra los elementos dentro del contenedor*/
+    padding-top: 10px;
+}
+
+
+/*ENCRIPTADOR*/
+.text-area {
+    background: skyblue;
+    border: none;
+    border-radius: 5%; 
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 1px 1px 10px black;
+    white-space: pre-wrap;
+}
+
+::placeholder {
+    color: black;
+    text-align: start;
+    opacity: .5;
+}
+
+h6 {
+    font-size: 0.5em;
+}
+
+.botones-encriptador {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.btn-encriptar {
+    background: #0A3871;
+    color: white;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: 900;
+    box-shadow: 1px 1px 10px black;
+}
+
+.btn-encriptar:active {
+    background: grey;
+    color: #0A3871;
+}
+
+
+
+
+
+.btn-desencriptar {
+    background: #0A3871;
+    color: white;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: 900;
+    box-shadow: 1px 1px 10px black;
+}
+
+.btn-desencriptar:active {
+    background: grey;
+    color: #0A3871;
+}
+
+
+
+
+
+
+/*MENSAJE*/
+#mensaje {
+    background: yellow; 
+    background-image: url("img/numbers-1630.gif");
+    background-size: contain; /*ajusta el tamaño a su contenedor*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    border-radius: 5%;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 1px 1px 10px black;
+}
+
+
+.boton-mensaje {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-copiar {
+    background: #0A3871;
+    color: white;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: 900;
+    box-shadow: 1px 1px 10px black;
+}
+
+.btn-copiar:active {
+    background: grey;
+    color: #0A3871;
+}
+
+
+
+
+/*FOOTER*/
+.info-desarrollador {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.img-github {
+    max-width: 50px;
+    border-radius: 100%;
+    box-shadow: 2px 2px 15px black;
+}
+
+.img-github:hover {
+    box-shadow: 1px 1px 15px blue;
+}
+
+
+
+
+
+  
+  
+/*DISEÑO ADAPTABLE PARA MOVIL*/
+@media (max-width: 768px) {
+
+    
+
+    .logo {
+        width: 100%;
+        margin: 10px 0 50px 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;   
+    }
+  
+    .referencia {
+    width: 100%;
+    text-align: center;
+    }
+
+    h3 {
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Shantell Sans', cursive;
+    }
+
+    span {
+    font-size: small;
+    font-weight: bold;
+    opacity: .5;
+    }
+
+
+    .container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    
+    /*área de texto y mensaje */
+    .text-area, #mensaje {
+      width: 100%;
+      margin: 10px 0 20px 10px;
+    }
+
+    /*placeholder*/
+    .text-area::placeholder {
+        text-align: center;
+      }
+
+    /*advertencia*/
+    h1 {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    /* Estilos para botones*/
+    .btn-encriptar, .btn-desencriptar, .btn-copiar {
+      margin: 0 10px 20px 10px ;
+    }
+    
+  }
