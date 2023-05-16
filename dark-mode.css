@@ -1,8 +1,8 @@
 
 /*DARK-MODE*/
-.dark-mode,.dark-mode .logo, .dark-mode .container, 
-.dark-mode .text-area, .dark-mode #mensaje, 
-.dark-mode button, .dark-mode  * {
+
+/*dark-mode para todo*/
+.dark-mode, .dark-mode  * {
   background-color: black;
   color: rgb(5, 255, 5);
 }
@@ -14,7 +14,6 @@
 }
 
 
-
 .dark-mode button, .dark-mode #dark-mode, .dark-mode .img-github  {
     border: 1px solid red;
     box-shadow: 2px 2px 15px red;
@@ -23,6 +22,8 @@
     color: rgb(255, 2, 2);
 }
 
+
+/*Active botones*/
 .dark-mode .btn-encriptar:active, .dark-mode .btn-desencriptar:active,
 .dark-mode .btn-copiar:active {
     color: yellow;
@@ -31,7 +32,7 @@
 }
 
 
-
+/*Hover botones*/
 .dark-mode .btn-encriptar:hover, .dark-mode .btn-desencriptar:hover,
 .dark-mode .btn-copiar:hover, .dark-mode .img-github:hover, .dark-mode #dark-mode:hover {
     border: 1px solid yellow;
