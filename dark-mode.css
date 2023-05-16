@@ -1,13 +1,14 @@
 
 /*DARK-MODE*/
-
-/*dark-mode para todo*/
+/*Dark-mode para todo*/
 .dark-mode, .dark-mode  * {
   background-color: black;
   color: rgb(5, 255, 5);
 }
 
 
+
+/*Otros*/
 .dark-mode .text-area, .dark-mode #mensaje {
     border: 1px solid yellow;
     box-shadow: 2px 2px 15px yellow;

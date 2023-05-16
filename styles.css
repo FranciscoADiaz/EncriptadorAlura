@@ -245,9 +245,10 @@ h6 {
     
         /*área de texto y mensaje */
         .text-area, #mensaje, #encriptador, .logo {
-          width: 200px; /*para que no se desborde en modo oscuro y queden partes blancas*/
+          width: 200px; /*chiquito para que no queden partes blancas en modo oscuro*/
           margin: 10px auto 20px auto;
           
+          font-size: medium; /*letra más chiquita*/
         }
 
         .botones-encriptador {
@@ -272,3 +273,7 @@ h6 {
         }
         
     }
+
+    /*DISEÑO ADAPTABLE PARA TABLET*/
+
+
