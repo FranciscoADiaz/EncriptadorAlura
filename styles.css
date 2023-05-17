@@ -57,23 +57,22 @@
 /*CONTENEDOR*/
 .container {
     display: flex; 
-    width: 940px;
+    width: 80%;
     margin: 0 auto;  /*centra el contenedor en la página*/
     justify-content: center; /*centra los elementos dentro del contenedor*/
+    justify-content: space-around;
     padding-top: 10px;
 }
 
 
 /*ENCRIPTADOR*/
 .text-area {
-    display: "";
     background: skyblue;
     border: none;
     border-radius: 5%; 
     padding: 10px;
     margin: 5px;
     box-shadow: 1px 1px 10px black;
-    white-space: pre-wrap;
 }
 
 
@@ -136,9 +135,9 @@ h6 {
 
 /*MENSAJE*/
 #mensaje {
-    background: yellow; 
-    background-image: url("img/4.gif");
-    background-size: contain; /*ajusta el tamaño a su contenedor*/
+    background: gray; 
+    background-image: url("img/background");
+    background-size: cover; /*ajusta el tamaño a su contenedor*/
     background-repeat: no-repeat;
     background-position: center;
     border: none;
@@ -146,9 +145,7 @@ h6 {
     padding: 10px;
     margin: 5px;
     box-shadow: 1px 1px 10px black;
-
 }
-
 
 .boton-mensaje {
     display: flex;
@@ -203,7 +200,7 @@ h6 {
 @media (max-width: 768px) {
 
     .logo {
-        margin: 10px 0 50px 0;
+        margin: 0 0 50px 0;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -215,15 +212,11 @@ h6 {
         height: 50px; 
         }
       
-    .referencia {
+    h1, .referencia {
         text-align: center;
-        }
+        margin: 0 auto;
+       }
     
-    h3 {
-        font-size: large;
-        font-weight: bold;
-        font-family: 'Shantell Sans', cursive;
-        }
     
     span {
         font-size: small;
@@ -233,27 +226,25 @@ h6 {
     
     
     .container {
+        width: auto; /*para que se adapte a la pantalla*/
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         }
         
-        #encriptador, #mensaje-desencriptador, .info-desarrollador, .container, .logo, .referencia{
-            width: auto; /*quita el espacio el blanco porque le faltaba ancho a los contenedores*/
-        }
     
         /*área de texto y mensaje */
-        .text-area, #mensaje, #encriptador, .logo {
-          width: 200px; /*chiquito para que no queden partes blancas en modo oscuro*/
-          margin: 10px auto 20px auto;
-          
-          font-size: medium; /*letra más chiquita*/
+        .logo, .text-area, #mensaje {
+          width: 90%; /*chiquito para que no queden partes blancas en modo oscuro*/
+          margin: 10px auto;
+          font-size: small;
         }
 
         .botones-encriptador {
             display: flex;
             flex-direction: column;
+            margin-bottom: 10px;
         }
     
         /*placeholder*/
@@ -261,19 +252,84 @@ h6 {
             text-align: center;
           }
     
-        /*advertencia*/
-        h1, .referencia {
-            text-align: center;
-            margin: 0 auto;
-        }
-        
         /* Estilos para botones*/
         .btn-encriptar, .btn-desencriptar, .btn-copiar {
-          margin: 0 10px 20px 10px ;
+          margin: 5px auto ;
         }
         
     }
 
-    /*DISEÑO ADAPTABLE PARA TABLET*/
 
+
+
+
+    /*DISEÑO ADAPTABLE PARA TABLET*/
+    @media (max-width: 1200px) {
+
+        .logo {
+            margin: 0 0 50px 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;   
+            }
+        
+        #dark-mode {
+            height: 50px; 
+            }
+          
+        h1, .referencia {
+            text-align: center;
+            margin: 0 auto;
+           }
+        
+        
+        span {
+            font-size: small;
+            font-weight: bold;
+            opacity: .5;
+            }
+        
+        
+        .container {
+            width: auto; /*para que se adapte a la pantalla*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            }
+            
+        
+            /*área de texto y mensaje */
+            .logo, .text-area, #mensaje, #mensaje-desencriptado, #encriptador {
+              width: 90%; /*chiquito para que no queden partes blancas en modo oscuro*/
+              margin: 10px auto;
+              font-size: medium;
+              text-align: center;
+              
+            }
+
+            .text-area, #mensaje {
+                width: 80%;
+            }
+    
+            .botones-encriptador {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 10px;
+            }
+        
+            /*placeholder*/
+            .text-area::placeholder {
+                text-align: center;
+              }
+        
+            /* Estilos para botones*/
+            .btn-encriptar, .btn-desencriptar, .btn-copiar {
+              margin: 5px auto ;
+            }
+            
+        }
+    
 
